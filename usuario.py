@@ -28,3 +28,7 @@ class Usuario:
     @property
     def contrasenia(self):
         return self._contrasenia
+
+    @contrasenia.setter
+    def contrasenia(self, contrasenia):
+        self._contrasenia = contrasenia

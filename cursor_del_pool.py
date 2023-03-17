@@ -1,7 +1,7 @@
 from logger_base import log
 from conexion import Conexion
 
-class CursorDelPool():
+class CursorDelPool:
     def __init__(self):
         self._cursor = None
         self._conexion = None
@@ -13,7 +13,7 @@ class CursorDelPool():
         return self._cursor
 
     def __exit__(self, tipoExc, valorExc, detalleExc):
-        log.debug('Ingreso al exit del contxt manager')
+        log.debug('Ingreso al exit del context manager')
         if valorExc:
             self._conexion.rollback()
             log.error(f'Error transaccion, rollback: {valorExc} {tipoExc} {detalleExc}')
